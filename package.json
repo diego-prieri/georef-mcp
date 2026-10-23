@@ -1,0 +1,34 @@
+{
+  "name": "georef-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for Argentina's public Georef API: search provinces, departments, municipalities and localities, normalize addresses and reverse geocode.",
+  "type": "module",
+  "bin": {
+    "georef-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test test/*.test.ts",
+    "test:live": "GEOREF_LIVE=1 node --import tsx --test test/live.test.ts",
+    "dev": "tsx src/index.ts",
+    "inspect": "npx @modelcontextprotocol/inspector tsx src/index.ts"
+  },
+  "keywords": ["mcp", "model-context-protocol", "georef", "argentina", "geocoding", "addresses"],
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.3"
+  }
+}
