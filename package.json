@@ -17,14 +17,21 @@
     "dev": "tsx src/index.ts",
     "inspect": "npx @modelcontextprotocol/inspector tsx src/index.ts"
   },
-  "keywords": ["mcp", "model-context-protocol", "georef", "argentina", "geocoding", "addresses"],
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "georef",
+    "argentina",
+    "geocoding",
+    "addresses"
+  ],
   "engines": {
     "node": ">=20"
   },
   "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.32.2",
-    "zod": "^3.25.76"
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
